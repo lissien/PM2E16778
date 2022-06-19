@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2E16778.Views.MainPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+
+                <Image x:Name="uth" HeightRequest="200" WidthRequest="100" Source="uthlogo.png" />
+                <Label Text="SITE VISITOR APP" 
+                       FontSize="20" 
+                       HorizontalOptions="Center" 
+                       Margin="0, 0, 0, 15"/>
+
+                <Image x:Name="imgphotoubicacion" HeightRequest="300" WidthRequest="100" BackgroundColor="AliceBlue" Margin="10" />
+                <Button x:Name="btntomarphoto"
+                        Text="Tomar Photo"
+                        Margin="20, 0"
+                        Clicked="btntomarphoto_Clicked" />
+
+                <Label Text="Longitud:" 
+                       Margin="20, 10, 20, 0"/>
+                <Entry x:Name="Longitud_input"
+                       IsEnabled="False"
+                       Margin="20, 5, 20, 0"/>
+
+                <Label Text="Latitud:" 
+                       Margin="20, 0"/>
+                <Entry x:Name="Latitud_input"
+                       IsEnabled="False"
+                       Margin="20, 5, 20, 0"/>
+
+                <Label Text="Descripcion:" 
+                       Margin="20, 0"/>
+                <Entry x:Name="Descripcion_input" 
+                       Margin="20, 5, 20, 0"/>
+
+                <Grid ColumnDefinitions="*,*" Margin="15, 0">
+                    <Button x:Name="btnaguardar"
+                        Text="Guardar"
+                        Grid.Column="0"
+                        Clicked="btnaguardar_Clicked" />
+
+                    <Button x:Name="btnlistviewubicaciones"
+                        Text="Ubicaciones"
+                        Grid.Column="1"
+                        Clicked="btnlistviewubicaciones_Clicked" />
+                </Grid>
+
+                <Button x:Name="btnsalir"
+                        Text="Salir"
+                        HorizontalOptions="Fill"
+                        Margin="95, 0, 95, 50"
+                        Clicked="btnsalir_Clicked" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
